@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function Money() {
+function Tools() {
   return (
     <View style={styles.container}>
       <Text>money!</Text>
@@ -18,4 +18,4 @@ function Money() {
   );
 }
 
-export default Money;
+export default Tools;

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import News from '../screens/News';
+import NewsStackNavigator from './NewsNavigator';
 import Learn from '../screens/Learn';
 import Invest from '../screens/Invest';
-import Money from '../screens/Money';
+import Tools from '../screens/Tools';
 import Market from '../screens/Market';
 
 const Tab = createBottomTabNavigator();
@@ -19,7 +19,7 @@ function TabNavigator() {
       })}>
       <Tab.Screen
         name="News"
-        component={News}
+        component={NewsStackNavigator}
         options={{
           headerShown: false,
           tabBarLabel: 'News',
@@ -40,13 +40,13 @@ function TabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Money"
-        component={Money}
+        name="Tools"
+        component={Tools}
         options={{
           headerShown: false,
-          tabBarLabel: 'Money',
+          tabBarLabel: 'Tools',
           tabBarIcon: ({color}) => (
-            <FontAwesome5 name={'money-bill'} color={color} size={28} />
+            <FontAwesome5 name={'tools'} color={color} size={28} />
           ),
         }}
       />
