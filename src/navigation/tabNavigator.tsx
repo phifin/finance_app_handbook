@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import NewsStackNavigator from './NewsNavigator';
 import Learn from '../screens/Learn';
-import Invest from '../screens/Invest';
+import PortfolioManager from '../screens/Invest';
 import ToolsStackNavigator from './ToolsNavigator';
 import MarketTabs from './marketNav';
 
@@ -55,7 +55,7 @@ function TabNavigator() {
       />
       <Tab.Screen
         name="Invest"
-        component={Invest}
+        component={PortfolioManager}
         options={{
           headerShown: false,
           tabBarLabel: 'Invest',
