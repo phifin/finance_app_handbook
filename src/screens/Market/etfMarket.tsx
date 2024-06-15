@@ -1,59 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Text, View, StyleSheet, ScrollView, TextInput} from 'react-native';
-import axios from 'axios';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
-
-const coinSymbols = [
-  'BTC',
-  'ETH',
-  'USDT',
-  'BNB',
-  'USDC',
-  'XRP',
-  'ADA',
-  'DOGE',
-  'SOL',
-  'TRX',
-  'DOT',
-  'LTC',
-  'BUSD',
-  'SHIB',
-  'AVAX',
-  'WBTC',
-  'MATIC',
-  'DAI',
-  'UNI',
-  'LINK',
-  'LEO',
-  'ATOM',
-  'ETC',
-  'TON',
-  'XMR',
-  'BCH',
-  'FIL',
-  'LDO',
-  'CRO',
-  'NEAR',
-  'QNT',
-  'VET',
-  'ALGO',
-  'ICP',
-  'HNT',
-  'FTM',
-  'EGLD',
-  'THETA',
-  'GRT',
-  'XTZ',
-  'MKR',
-  'NEO',
-  'AAVE',
-  'BSV',
-  'AXS',
-  'RUNE',
-  'ZEC',
-  'ENS',
-  'STX',
-];
+// Importing the local JSON data
+import marketData from '../../assets/etfs.json';
 
 const PriceCard = ({order, name, price, change}) => {
   return (
@@ -66,32 +15,19 @@ const PriceCard = ({order, name, price, change}) => {
   );
 };
 
-const Market = () => {
-  const [marketData, setMarketData] = useState([]);
+const ETFMarket = () => {
+  const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    async function fetchData() {
-      const fetchedData = [];
-      for (const symbol of coinSymbols) {
-        try {
-          const response = await axios.get(
-            `https://api.diadata.org/v1/quotation/${symbol}`,
-          );
-          const json = response.data;
-          fetchedData.push(json);
-        } catch (ex) {
-          console.error('Error fetching data for', symbol, ':', ex);
-        }
-      }
-      setMarketData(fetchedData);
-    }
-
-    fetchData();
+    // Since the data is local, we can directly set it without an async call
+    setData(marketData);
   }, []);
 
-  const filteredData = marketData.filter(item =>
-    item.Name.toLowerCase().includes(searchQuery.toLowerCase()),
+  const filteredData = data.filter(
+    item =>
+      item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.symbol.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -113,7 +49,7 @@ const Market = () => {
         <FontAwesome5Icon name="search" size={12} />
         <TextInput
           style={styles.searchBar}
-          placeholder="Search your cryptocurrency"
+          placeholder="Search your ETFs"
           value={searchQuery}
           onChangeText={text => setSearchQuery(text)}
         />
@@ -127,17 +63,13 @@ const Market = () => {
       <ScrollView>
         {filteredData.length > 0 &&
           filteredData.map((item, index) => {
-            const change24h = (
-              ((item.Price - item.PriceYesterday) / item.PriceYesterday) *
-              100
-            ).toFixed(2);
             return (
               <PriceCard
-                key={index} // Using index as key, ensure it's unique
+                key={item.symbol} // Using symbol as key, which should be unique
                 order={index + 1}
-                name={item.Name} // Using the Name from the API response
-                price={item.Price.toFixed(2)} // Rounding the Price to 2 decimal places
-                change={`${change24h}%`} // Calculating and rounding change 24h to 2 decimal places
+                name={item.symbol} // Using the name from the JSON file
+                price={item.price.toFixed(2)} // Rounding the price to 2 decimal places
+                change={item.change} // Displaying change 24h
               />
             );
           })}
@@ -161,7 +93,7 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     fontSize: 16,
-    color: 'black',
+    color: '#6a0dad',
   },
   headerCell: {
     flex: 1,
@@ -172,4 +104,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Market;
+export default ETFMarket;

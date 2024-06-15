@@ -1,0 +1,245 @@
+[
+  {
+    "symbol": "BIGB",
+    "name": "Roundhill BIG Bank ETF",
+    "price": 28.87,
+    "exchange": "NASDAQ Global Market",
+    "exchangeShortName": "NASDAQ",
+    "type": "etf",
+    "change": "1.25%"
+  },
+  {
+    "symbol": "AT1.L",
+    "name": "Invesco AT1 Capital Bond ETF",
+    "price": 24.935,
+    "exchange": "London Stock Exchange",
+    "exchangeShortName": "LSE",
+    "type": "etf",
+    "change": "-2.47%"
+  },
+  {
+    "symbol": "XDEM.DE",
+    "name": "Xtrackers MSCI World Momentum UCITS ETF",
+    "price": 60.65,
+    "exchange": "Frankfurt Stock Exchange",
+    "exchangeShortName": "XETRA",
+    "type": "etf",
+    "change": "0.56%"
+  },
+  {
+    "symbol": "DRFD.TO",
+    "name": "Desjardins RI Developed ex-USA ex-Canada Multifactor",
+    "price": 23.23,
+    "exchange": "Toronto Stock Exchange",
+    "exchangeShortName": "TSX",
+    "type": "etf",
+    "change": "3.12%"
+  },
+  {
+    "symbol": "BGX.L",
+    "name": "Expat Bulgaria SOFIX UCITS ETF",
+    "price": 0.6335,
+    "exchange": "London Stock Exchange",
+    "exchangeShortName": "LSE",
+    "type": "etf",
+    "change": "-1.78%"
+  },
+  {
+    "symbol": "EQEU.DE",
+    "name": "Invesco EQQQ NASDAQ-100 UCITS ETF (EUR Hdg)",
+    "price": 349.3,
+    "exchange": "Frankfurt Stock Exchange",
+    "exchangeShortName": "XETRA",
+    "type": "etf",
+    "change": "4.34%"
+  },
+  {
+    "symbol": "PABZ.PA",
+    "name": "Amundi Index Solutions - Amundi Euro iStoxx Climate Paris Aligned Pab",
+    "price": 72.79,
+    "exchange": "Paris",
+    "exchangeShortName": "EURONEXT",
+    "type": "etf",
+    "change": "2.25%"
+  },
+  {
+    "symbol": "DBX6.DE",
+    "name": "Xtrackers MSCI Brazil UCITS ETF",
+    "price": 39.69,
+    "exchange": "Frankfurt Stock Exchange",
+    "exchangeShortName": "XETRA",
+    "type": "etf",
+    "change": "-0.47%"
+  },
+  {
+    "symbol": "EL4D.DE",
+    "name": "Deka STOXX Europe Strong Value 20 UCITS ETF",
+    "price": 23.405,
+    "exchange": "Frankfurt Stock Exchange",
+    "exchangeShortName": "XETRA",
+    "type": "etf",
+    "change": "0.14%"
+  },
+  {
+    "symbol": "ODDS",
+    "name": "Pacer BlueStar Digital Entertainment ETF",
+    "price": 21.5,
+    "exchange": "NASDAQ Global Market",
+    "exchangeShortName": "NASDAQ",
+    "type": "etf",
+    "change": "-4.02%"
+  },
+  {
+    "symbol": "RSPR",
+    "name": "Invesco S&P 500® Equal Weight Real Estate ETF",
+    "price": 32.555,
+    "exchange": "New York Stock Exchange",
+    "exchangeShortName": "NYSE",
+    "type": "etf",
+    "change": "1.98%"
+  },
+  {
+    "symbol": "EHDL.DE",
+    "name": "Invesco FTSE Emerging Markets High Dividend Low Volatility UCITS ETF",
+    "price": 21.7,
+    "exchange": "Frankfurt Stock Exchange",
+    "exchangeShortName": "XETRA",
+    "type": "etf",
+    "change": "-3.21%"
+  },
+  {
+    "symbol": "VERG.L",
+    "name": "Vanguard FTSE Developed Europe ex UK UCITS ETF",
+    "price": 38.6175,
+    "exchange": "London Stock Exchange",
+    "exchangeShortName": "LSE",
+    "type": "etf",
+    "change": "4.11%"
+  },
+  {
+    "symbol": "IGHG",
+    "name": "ProShares Investment Grade—Interest Rate Hedged",
+    "price": 76.09,
+    "exchange": "BATS",
+    "exchangeShortName": "ETF",
+    "type": "etf",
+    "change": "1.75%"
+  },
+  {
+    "symbol": "EMAU.L",
+    "name": "L&G ESG Emerging Markets Corporate Bond (USD) UCITS ETF",
+    "price": 9.841,
+    "exchange": "London Stock Exchange",
+    "exchangeShortName": "LSE",
+    "type": "etf",
+    "change": "-2.58%"
+  },
+  {
+    "symbol": "6PSK.DE",
+    "name": "Invesco FTSE RAFI Emerging Markets UCITS ETF",
+    "price": 8.15,
+    "exchange": "Frankfurt Stock Exchange",
+    "exchangeShortName": "XETRA",
+    "type": "etf",
+    "change": "0.43%"
+  },
+  {
+    "symbol": "EFZ",
+    "name": "ProShares Short MSCI EAFE",
+    "price": 16.68,
+    "exchange": "New York Stock Exchange Arca",
+    "exchangeShortName": "AMEX",
+    "type": "etf",
+    "change": "-1.34%"
+  },
+  {
+    "symbol": "CSBGE3.SW",
+    "name": "iShares VII PLC - iShares € Govt Bond 1-3yr UCITS ETF EUR (Acc)",
+    "price": 109.5,
+    "exchange": "Swiss Exchange",
+    "exchangeShortName": "SIX",
+    "type": "etf",
+    "change": "3.56%"
+  },
+  {
+    "symbol": "VODS.L",
+    "name": "Leverage Shares -1x Short Vodafone ETP",
+    "price": 485.7,
+    "exchange": "London Stock Exchange",
+    "exchangeShortName": "LSE",
+    "type": "etf",
+    "change": "-0.98%"
+  },
+  {
+    "symbol": "3SNF.L",
+    "name": "GraniteShares 3x Short Netflix Daily ETP",
+    "price": 4.439,
+    "exchange": "London Stock Exchange",
+    "exchangeShortName": "LSE",
+    "type": "etf",
+    "change": "-4.67%"
+  },
+  {
+    "symbol": "100H.PA",
+    "name": "MULTI-UNITS LUXEMBOURG - Lyxor FTSE 100 UCITS ETF - Monthly Hedged to EUR - Acc",
+    "price": 148.9,
+    "exchange": "Paris",
+    "exchangeShortName": "EURONEXT",
+    "type": "etf",
+    "change": "0.92%"
+  },
+  {
+    "symbol": "SC0H.DE",
+    "name": "Invesco MSCI USA UCITS ETF",
+    "price": 145.13,
+    "exchange": "Frankfurt Stock Exchange",
+    "exchangeShortName": "XETRA",
+    "type": "etf",
+    "change": "2.14%"
+  },
+  {
+    "symbol": "FSEU.L",
+    "name": "iShares Edge MSCI Europe Multifactor UCITS ETF EUR (Acc)",
+    "price": 789.241,
+    "exchange": "London Stock Exchange",
+    "exchangeShortName": "LSE",
+    "type": "etf",
+    "change": "1.02%"
+  },
+  {
+    "symbol": "NUMG",
+    "name": "Nuveen ESG Mid-Cap Growth ETF",
+    "price": 41.6,
+    "exchange": "BATS",
+    "exchangeShortName": "ETF",
+    "type": "etf",
+    "change": "-1.87%"
+  },
+  {
+    "symbol": "AIFD",
+    "name": "TCW ETF Trust",
+    "price": 27.62,
+    "exchange": "New York Stock Exchange Arca",
+    "exchangeShortName": "AMEX",
+    "type": "etf",
+    "change": "4.68%"
+  },
+  {
+    "symbol": "NCPB",
+    "name": "Nuveen Core Plus Bond ETF",
+    "price": 25.095,
+    "exchange": "Nasdaq",
+    "exchangeShortName": "NASDAQ",
+    "type": "etf",
+    "change": "0.83%"
+  },
+  {
+    "symbol": "7322.HK",
+    "name": "Global X S&P 500 Daily (-1x) Inverse Product",
+    "price": 6.6,
+    "exchange": "HKSE",
+    "exchangeShortName": "HKSE",
+    "type": "etf",
+    "change": "3.27%"
+  }
+]

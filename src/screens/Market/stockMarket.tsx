@@ -7,7 +7,6 @@ const stockSymbols = [
   'MSFT',
   'GOOGL',
   'AMZN',
-  'FB',
   'TSLA',
   'NVDA',
   'BRK.B',
@@ -107,6 +106,7 @@ const StockMarket = () => {
 
 const styles = StyleSheet.create({
   row: {
+    marginLeft: -30,
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 10,

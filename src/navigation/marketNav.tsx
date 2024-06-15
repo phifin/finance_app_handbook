@@ -1,6 +1,7 @@
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Market from '../screens/Market/cryptoMarket';
 import StockMarket from '../screens/Market/stockMarket';
+import ETFMarket from '../screens/Market/etfMarket';
 const Tab = createMaterialTopTabNavigator();
 
 function MarketTabs() {
@@ -11,8 +12,8 @@ function MarketTabs() {
         tabBarStyle: {backgroundColor: '#952d82'},
       }}>
       <Tab.Screen name="Crypto" component={Market} />
-      <Tab.Screen name="Stock" component={StockMarket} />
-      <Tab.Screen name="Commodity" component={Market} />
+      <Tab.Screen name="Stock" component={Market} />
+      <Tab.Screen name="ETF" component={ETFMarket} />
     </Tab.Navigator>
   );
 }

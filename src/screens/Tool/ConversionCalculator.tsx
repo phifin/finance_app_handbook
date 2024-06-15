@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput, Button, StyleSheet} from 'react-native';
+import {Image} from 'react-native';
+import {appLogo} from '../../assets/imageSrc';
 import {Picker} from '@react-native-picker/picker';
 const ConversionCalculator = () => {
   const [amount, setAmount] = useState('');
@@ -30,6 +32,23 @@ const ConversionCalculator = () => {
 
   return (
     <View style={styles.container}>
+      <View>
+        <Image
+          source={appLogo}
+          alt="appLogo"
+          style={{height: 200, width: 200, alignSelf: 'center'}}
+        />
+        <Text
+          style={{
+            fontSize: 45,
+            color: '#4b0082',
+            alignSelf: 'center',
+            marginTop: -20,
+            marginBottom: 40,
+          }}>
+          Finhub Tools
+        </Text>
+      </View>
       <Text style={styles.header}>Currency Conversion</Text>
       <TextInput
         style={styles.input}
@@ -53,7 +72,7 @@ const ConversionCalculator = () => {
         </Picker>
       </View>
       <View style={styles.pickerContainer}>
-        <Text>To:</Text>
+        <Text style={{marginRight: 15}}>To:</Text>
         <Picker
           style={styles.picker}
           selectedValue={toCurrency}
@@ -66,7 +85,7 @@ const ConversionCalculator = () => {
           <Picker.Item label="VND" value="VND" />
         </Picker>
       </View>
-      <Button title="Convert" onPress={handleConvert} />
+      <Button title="Convert" onPress={handleConvert} color="#4b0082" />
       <Text style={styles.result}>{result}</Text>
     </View>
   );
@@ -75,14 +94,16 @@ const ConversionCalculator = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: -70,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
   },
   header: {
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: '#4b0082',
   },
   input: {
     width: '100%',
@@ -103,7 +124,7 @@ const styles = StyleSheet.create({
   },
   result: {
     marginTop: 20,
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
   },
 });

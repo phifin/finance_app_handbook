@@ -40,9 +40,10 @@ function TabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Các tiện ích"
+        name="Tools"
         component={ToolsStackNavigator}
         options={{
+          headerShown: false,
           tabBarLabel: 'Tools',
           headerStyle: {height: 100},
           headerTitleAlign: 'center',
