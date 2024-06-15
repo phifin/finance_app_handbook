@@ -4,8 +4,8 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import NewsStackNavigator from './NewsNavigator';
 import Learn from '../screens/Learn';
 import Invest from '../screens/Invest';
-import Tools from '../screens/Tools';
-import Market from '../screens/Market';
+import ToolsStackNavigator from './ToolsNavigator';
+import MarketTabs from './marketNav';
 
 const Tab = createBottomTabNavigator();
 function TabNavigator() {
@@ -30,7 +30,7 @@ function TabNavigator() {
       />
       <Tab.Screen
         name="Market"
-        component={Market}
+        component={MarketTabs}
         options={{
           headerShown: false,
           tabBarLabel: 'Market',
@@ -40,11 +40,13 @@ function TabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Tools"
-        component={Tools}
+        name="Các tiện ích"
+        component={ToolsStackNavigator}
         options={{
-          headerShown: false,
           tabBarLabel: 'Tools',
+          headerStyle: {height: 100},
+          headerTitleAlign: 'center',
+          headerTitleStyle: {fontSize: 40},
           tabBarIcon: ({color}) => (
             <FontAwesome5 name={'tools'} color={color} size={28} />
           ),

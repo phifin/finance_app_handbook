@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Text, ScrollView, Image} from 'react-native';
 import {RouteProp} from '@react-navigation/native';
-import BTC from '../assets/imageSrc';
-import {RootStackParamList} from '../type/type';
+import BTC from '../../assets/imageSrc';
+import {RootStackParamList} from '../../type/type';
 
 type NewsDetailProps = {
   route: RouteProp<RootStackParamList, 'NewsDetails'>;

@@ -1,10 +1,11 @@
 import React from 'react';
-import {ScrollView, View, Text, Image} from 'react-native';
+import {ScrollView, View, Text, Image, TouchableOpacity} from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RouteProp} from '@react-navigation/native';
-import NewsCard from '../components/newsCard';
-import BTC from '../assets/imageSrc';
-import {RootStackParamList} from '../type/type';
+import NewsCard from '../../components/newsCard';
+import BTC from '../../assets/imageSrc';
+import {RootStackParamList} from '../../type/type';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const randomNewsArray = [
   {
     id: '1',
@@ -33,8 +34,21 @@ type NewsProps = {
 };
 
 const News: React.FC<NewsProps> = ({navigation}) => {
+  const handleLogout = async () => {
+    try {
+      // Xóa accessToken từ AsyncStorage
+      await AsyncStorage.removeItem('accessToken');
+      // Cập nhật trạng thái isLoggedIn về false
+      // Điều hướng về màn hình Login
+    } catch (error) {
+      console.error('Error logging out:', error.message);
+    }
+  };
   return (
     <ScrollView>
+      <TouchableOpacity onPress={handleLogout}>
+        <Text>Đăng xuất</Text>
+      </TouchableOpacity>
       <View style={{margin: 10}}>
         <Image source={BTC} style={{height: 300, width: 'auto'}} />
         <Text style={{fontSize: 30, fontWeight: 'bold'}}>
