@@ -56,7 +56,8 @@ const Tools: React.FC<ToolProps> = ({navigation}) => {
           marginVertical: 20,
           borderWidth: 1,
           borderRadius: 10,
-        }}>
+        }}
+        onPress={() => navigation.navigate('TaxCalculator')}>
         <FontAwesome5
           name="money-bill"
           color="#81088f"
@@ -76,7 +77,8 @@ const Tools: React.FC<ToolProps> = ({navigation}) => {
           marginHorizontal: 10,
           borderWidth: 1,
           borderRadius: 10,
-        }}>
+        }}
+        onPress={() => navigation.navigate('SocialInsuaranceCalculator')}>
         <FontAwesome5
           name="user-shield"
           color="#81088f"

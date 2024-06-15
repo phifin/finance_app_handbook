@@ -8,4 +8,6 @@ export type RootStackParamList = {
   Register: undefined;
   Login: undefined;
   ConversionCalculator: undefined; // Khai báo ConversionCalculator ở đây
+  TaxCalculator: undefined;
+  SocialInsuaranceCalculator: undefined;
 };

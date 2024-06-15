@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     fontSize: 16,
-    color: '#6a0dad',
+    color: 'black',
   },
   headerCell: {
     flex: 1,
