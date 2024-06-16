@@ -6,12 +6,15 @@ import {
   TextInput,
   ScrollView,
   StyleSheet,
+  TouchableOpacity,
+  Image,
 } from 'react-native';
 import axios from 'axios';
 import {PieChart} from 'react-native-chart-kit';
 import {Dimensions} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
-
+import Collapsible from 'react-native-collapsible';
+import {appLogo} from '../assets/imageSrc';
 const coinSymbols = [
   'BTC',
   'ETH',
@@ -122,6 +125,8 @@ const PortfolioManager = () => {
   const [quantity, setQuantity] = useState('');
   const [coinPrices, setCoinPrices] = useState({});
   const [isBuying, setIsBuying] = useState(false);
+  const [isSelling, setIsSelling] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   useEffect(() => {
     fetchCoinPrices();
@@ -144,7 +149,7 @@ const PortfolioManager = () => {
 
   const handleBuy = () => {
     const price = coinPrices[selectedCoin];
-    if (price && quantity) {
+    if (price && quantity > 0) {
       const existingAssetIndex = portfolio.findIndex(
         asset => asset.symbol === selectedCoin,
       );
@@ -176,6 +181,41 @@ const PortfolioManager = () => {
     }
   };
 
+  const handleSell = () => {
+    if (quantity > 0) {
+      const existingAssetIndex = portfolio.findIndex(
+        asset => asset.symbol === selectedCoin,
+      );
+      if (existingAssetIndex !== -1) {
+        const existingAsset = portfolio[existingAssetIndex];
+        const sellQuantity = parseFloat(quantity);
+        if (existingAsset.quantity >= sellQuantity) {
+          const remainingQuantity = existingAsset.quantity - sellQuantity;
+          if (remainingQuantity === 0) {
+            const updatedPortfolio = portfolio.filter(
+              asset => asset.symbol !== selectedCoin,
+            );
+            setPortfolio(updatedPortfolio);
+          } else {
+            const updatedAsset = {
+              ...existingAsset,
+              quantity: remainingQuantity,
+            };
+            const updatedPortfolio = [...portfolio];
+            updatedPortfolio[existingAssetIndex] = updatedAsset;
+            setPortfolio(updatedPortfolio);
+          }
+          setIsSelling(false);
+          setQuantity('');
+        } else {
+          alert('Insufficient quantity to sell');
+        }
+      } else {
+        alert('Asset not found in portfolio');
+      }
+    }
+  };
+
   const calculatePortfolioValue = () => {
     return portfolio.reduce((acc, asset) => {
       const currentPrice = coinPrices[asset.symbol];
@@ -194,8 +234,8 @@ const PortfolioManager = () => {
 
   const getPieChartData = () => {
     const assets = portfolio.map(asset => ({
-      name: asset.symbol, // Tên của tài sản
-      value: asset.quantity * coinPrices[asset.symbol], // Giá trị của tài sản
+      name: asset.symbol,
+      value: asset.quantity * coinPrices[asset.symbol],
     }));
 
     assets.sort((a, b) => b.value - a.value);
@@ -206,7 +246,7 @@ const PortfolioManager = () => {
       .reduce((acc, asset) => acc + asset.value, 0);
 
     const data = topAssets.map(asset => ({
-      name: asset.name,
+      name: asset.name, // Only the asset name will be displayed in the legend
       value: asset.value,
       color: fixedColors[asset.name] || '#CCCCCC',
       legendFontColor: '#7F7F7F',
@@ -223,14 +263,18 @@ const PortfolioManager = () => {
       });
     }
 
-    return data.map(asset => ({
-      ...asset,
-      name: `${asset.name}`,
-    }));
+    return data;
   };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      <View>
+        <Image
+          source={appLogo}
+          alt="appLogo"
+          style={{height: 120, width: 120, alignSelf: 'center'}}
+        />
+      </View>
       <Text style={styles.header}>Investment Portfolio</Text>
       {portfolio.length > 0 && (
         <>
@@ -242,7 +286,7 @@ const PortfolioManager = () => {
               backgroundColor: '#e26a00',
               backgroundGradientFrom: '#fb8c00',
               backgroundGradientTo: '#ffa726',
-              decimalPlaces: 2, // optional, defaults to 2dp
+              decimalPlaces: 2,
               color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
               labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
               style: {
@@ -269,17 +313,9 @@ const PortfolioManager = () => {
         title="Buy Asset"
         onPress={() => setIsBuying(true)}
         style={styles.buyButton}
-        color="#4b0082"
+        color="#02490a"
       />
-      <Text
-        style={{
-          color: '#4b0082',
-          fontSize: 20,
-          marginTop: 15,
-          marginBottom: 15,
-        }}>
-        Trading History
-      </Text>
+      <View style={styles.spacing}></View>
       {isBuying && (
         <View style={styles.buyForm}>
           <Picker
@@ -301,15 +337,49 @@ const PortfolioManager = () => {
           <Button title="Cancel" onPress={() => setIsBuying(false)} />
         </View>
       )}
-      {portfolio.map((asset, index) => (
-        <View key={index} style={styles.asset}>
-          <Text>{asset.symbol}</Text>
-          <Text>Quantity: {asset.quantity}</Text>
-          <Text>Avg Buy Price: {asset.buyPrice.toFixed(2)}$</Text>
-          <Text>Current Price: {coinPrices[asset.symbol]?.toFixed(2)}$</Text>
-          <Text>PNL: {calculatePNL(asset).toFixed(2)}$</Text>
+      <Button
+        title="Sell Asset"
+        onPress={() => setIsSelling(true)}
+        style={styles.sellButton}
+        color="#8B0000"
+      />
+      {isSelling && (
+        <View style={styles.sellForm}>
+          <Picker
+            selectedValue={selectedCoin}
+            onValueChange={itemValue => setSelectedCoin(itemValue)}
+            style={styles.picker}>
+            {coinSymbols.map(symbol => (
+              <Picker.Item key={symbol} label={symbol} value={symbol} />
+            ))}
+          </Picker>
+          <TextInput
+            style={styles.input}
+            placeholder="Quantity"
+            keyboardType="numeric"
+            value={quantity}
+            onChangeText={setQuantity}
+          />
+          <Button title="Sell" onPress={handleSell} />
+          <Button title="Cancel" onPress={() => setIsSelling(false)} />
         </View>
-      ))}
+      )}
+      <TouchableOpacity
+        onPress={() => setIsCollapsed(!isCollapsed)}
+        style={styles.collapsibleHeader}>
+        <Text style={styles.collapsibleHeaderText}>Trading Pairs</Text>
+      </TouchableOpacity>
+      <Collapsible collapsed={isCollapsed}>
+        {portfolio.map((asset, index) => (
+          <View key={index} style={styles.asset}>
+            <Text>{asset.symbol}</Text>
+            <Text>Quantity: {asset.quantity}</Text>
+            <Text>Avg Buy Price: {asset.buyPrice.toFixed(2)}$</Text>
+            <Text>Current Price: {coinPrices[asset.symbol]?.toFixed(2)}$</Text>
+            <Text>PNL: {calculatePNL(asset).toFixed(2)}$</Text>
+          </View>
+        ))}
+      </Collapsible>
     </ScrollView>
   );
 };
@@ -321,6 +391,10 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   buyForm: {
+    marginBottom: 20,
+    width: '100%',
+  },
+  sellForm: {
     marginBottom: 20,
     width: '100%',
   },
@@ -356,6 +430,24 @@ const styles = StyleSheet.create({
   },
   buyButton: {
     marginBottom: 20,
+  },
+  spacing: {
+    marginTop: 10,
+    marginBottom: 10,
+  },
+  sellButton: {
+    marginBottom: 20,
+  },
+  collapsibleHeader: {
+    backgroundColor: '#4b0082',
+    padding: 10,
+    marginVertical: 10,
+    width: '100%',
+    alignItems: 'center',
+  },
+  collapsibleHeaderText: {
+    color: 'white',
+    fontSize: 20,
   },
 });
 

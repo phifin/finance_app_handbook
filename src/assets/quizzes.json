@@ -1,0 +1,274 @@
+[
+  {
+    "question": "Which of the following is a primary function of money?",
+    "options": [
+      "Store of value",
+      "Labor force participation rate",
+      "Balance of trade"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "Money needs to retain its value over time to be effective."
+  },
+  {
+    "question": "What does GDP stand for?",
+    "options": [
+      "Global Demand Product",
+      "Gross Development Production",
+      "Gross Domestic Product"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "It measures the total value of goods and services produced in a country."
+  },
+  {
+    "question": "What is inflation?",
+    "options": [
+      "Increase in the value of currency",
+      "Decrease in the price of goods and services",
+      "Increase in the price of goods and services"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "It refers to a general increase in the price of goods and services over time."
+  },
+  {
+    "question": "What is fiscal policy?",
+    "options": [
+      "Monetary policy controlled by central banks",
+      "Government policy related to taxation and spending",
+      "Policy related to international trade"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "It involves government decisions on spending and taxation to influence the economy."
+  },
+  {
+    "question": "Which market structure is characterized by a large number of sellers and buyers?",
+    "options": ["Monopoly", "Oligopoly", "Perfect competition"],
+    "correctAnswerIndex": 2,
+    "hint": "In this structure, no single seller or buyer has significant control over market price."
+  },
+  {
+    "question": "What is the role of the Federal Reserve in the U.S.?",
+    "options": [
+      "Regulate international trade",
+      "Set fiscal policy",
+      "Control inflation and monetary policy"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "It oversees the nation's monetary system and implements monetary policy."
+  },
+  {
+    "question": "What is a budget deficit?",
+    "options": [
+      "Excess of government spending over revenue in a fiscal year",
+      "Excess of government revenue over spending in a fiscal year",
+      "Difference between imports and exports of a country"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "It occurs when government spending exceeds its revenue within a fiscal year."
+  },
+  {
+    "question": "Which economic indicator measures the average change in prices of goods and services over time?",
+    "options": [
+      "Unemployment rate",
+      "Gross domestic product (GDP)",
+      "Consumer Price Index (CPI)"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "It reflects inflationary trends by tracking changes in prices of a basket of goods."
+  },
+  {
+    "question": "What is the law of demand in economics?",
+    "options": [
+      "As prices increase, demand decreases",
+      "As prices decrease, demand increases",
+      "As prices increase, demand increases"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "It explains the inverse relationship between price and quantity demanded."
+  },
+  {
+    "question": "What is a trade deficit?",
+    "options": [
+      "Excess of government spending over revenue",
+      "Excess of exports over imports",
+      "Difference between savings and investment"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "It occurs when a country imports more goods than it exports."
+  },
+  {
+    "question": "What is the purpose of the World Trade Organization (WTO)?",
+    "options": [
+      "Promote global environmental sustainability",
+      "Facilitate international monetary cooperation",
+      "Oversee rules of trade between nations"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "It aims to promote fair and predictable international trade relations."
+  },
+  {
+    "question": "What is the role of the International Monetary Fund (IMF)?",
+    "options": [
+      "Provide loans and financial assistance to developing countries",
+      "Facilitate international trade agreements",
+      "Regulate global stock markets"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "It provides financial assistance and policy advice to member countries."
+  },
+  {
+    "question": "What is a stock market index?",
+    "options": [
+      "A measure of inflation rate in a country",
+      "A weighted average of prices of a selected group of stocks",
+      "An indicator of trade balance between nations"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "It represents the performance of a specific group of stocks."
+  },
+  {
+    "question": "What does ROI stand for?",
+    "options": ["Return on Investment", "Risk of Inflation", "Rate of Income"],
+    "correctAnswerIndex": 0,
+    "hint": "It measures the profitability of an investment relative to its cost."
+  },
+  {
+    "question": "What is a bear market?",
+    "options": [
+      "A market with falling stock prices",
+      "A market with rising stock prices",
+      "A market with stable stock prices"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "It describes a prolonged period of declining stock prices."
+  },
+  {
+    "question": "What is a bull market?",
+    "options": [
+      "A market with falling stock prices",
+      "A market with rising stock prices",
+      "A market with stable stock prices"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "It refers to a period of rising stock prices and investor optimism."
+  },
+  {
+    "question": "What is a mutual fund?",
+    "options": [
+      "A pool of money from multiple investors used to buy stocks, bonds, or other assets",
+      "A type of bond issued by governments",
+      "An individual retirement account"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "It diversifies investments across a range of assets to reduce risk."
+  },
+  {
+    "question": "What is a recession?",
+    "options": [
+      "Period of declining economic activity, lasting more than a few months",
+      "Period of rapid economic growth",
+      "Period of stable economic conditions"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "It is typically characterized by job losses, reduced production, and lower incomes."
+  },
+  {
+    "question": "What is the role of the Securities and Exchange Commission (SEC)?",
+    "options": [
+      "Regulate and oversee financial markets and securities transactions",
+      "Manage the federal budget",
+      "Oversee international trade agreements"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "It ensures fair and efficient markets while protecting investors."
+  },
+  {
+    "question": "What is the difference between stocks and bonds?",
+    "options": [
+      "Stocks represent ownership in a company, while bonds represent debt",
+      "Stocks are more risky investments than bonds",
+      "Bonds offer higher returns than stocks"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "Stocks entitle holders to a share of company ownership, while bonds are debt obligations."
+  },
+  {
+    "question": "What is a blue chip stock?",
+    "options": [
+      "A stock with a high market price",
+      "A stock issued by a technology company",
+      "A stock of a well-established and financially sound company"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "It typically refers to stocks of large, stable companies with a history of reliable performance."
+  },
+  {
+    "question": "What is diversification in investment?",
+    "options": [
+      "Investing in one type of asset",
+      "Investing in multiple assets to spread risk",
+      "Investing in risky assets only"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "It involves spreading investments across different asset classes to minimize risk."
+  },
+  {
+    "question": "What is a derivative in finance?",
+    "options": [
+      "A financial instrument whose value is based on the value of another asset",
+      "An investment with guaranteed returns",
+      "A type of bank account"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "It derives its value from an underlying asset, such as a stock, bond, or commodity."
+  },
+  {
+    "question": "What is the purpose of a 401(k) retirement plan?",
+    "options": [
+      "Allow employees to save and invest a portion of their paycheck before taxes",
+      "Provide health insurance benefits to retirees",
+      "Offer government subsidies to retired individuals"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "It helps employees save for retirement by allowing tax-deferred contributions."
+  },
+  {
+    "question": "What is a hedge fund?",
+    "options": [
+      "A fund that invests in high-risk stocks only",
+      "A fund that invests in commodities",
+      "A fund that pools capital from accredited individuals or institutional investors"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "It targets high returns for wealthy investors through diversified strategies."
+  },
+  {
+    "question": "What isinsider trading?",
+    "options": [
+      "Trading stocks based on information available to the public",
+      "Trading stocks based on information not available to the public",
+      "Trading stocks based on technical analysis"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "It involves buying or selling stocks using non-public, material information about a company."
+  },
+  {
+    "question": "What is the role of a financial advisor?",
+    "options": [
+      "Offer guidance on financial matters and investment strategies",
+      "Provide legal advice to clients",
+      "Process insurance claims"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "They assist clients in managing their finances, investments, and long-term financial goals."
+  },
+  {
+    "question": "What is the difference between a stock split and a reverse stock split?",
+    "options": [
+      "A stock split increases the number of shares outstanding, while a reverse stock split decreases the number of shares outstanding",
+      "A reverse stock split increases the number of shares outstanding, while a stock split decreases the number of shares outstanding",
+      "A stock split and a reverse stock split have the same effect on shares outstanding"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "One increases the number of shares available per shareholder, the other decreases it."
+  }
+]
